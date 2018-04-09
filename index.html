@@ -6,29 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Talks By Benjamin Lannon</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 90vh;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Talks by Benjamin Lannon</h1>
+    <header>
+        <div class="container">
+            <div class="non-nav">
+                <div class="title">Benjamin Lannon</div>
+                <i class="fa fa-bars" id="menu-button"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://lannonbr.com/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://lannonbr.com/index.html#work">Work</a>
+                    </li>
+                    <li>
+                        <a href="https://lannonbrtalks.netlify.com/">Talks</a>
+                    </li>
+                    <li>
+                        <a href="https://lannonbr.com/index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="hero">
+        <h1>Talks</h1>
+    </div>
+    <section class="container">
+        <h1 class="center">Talks by Benjamin Lannon</h1>
         <p>The follwing is a collection of slide decks of talks I've given.</p>
         <h2>Talks</h2>
         <ul>
@@ -45,8 +55,9 @@
         <p>
             <a href="https://lannonbr.com">Head to lannonbr.com</a>
         </p>
-    </div>
-
+    </section>
+    <script src="./js/main.js"></script>
+    <script src="https://use.fontawesome.com/a5e9de0506.js" defer=""></script>
 </body>
 
 </html>
