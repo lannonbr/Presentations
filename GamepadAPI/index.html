@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="../css/reveal.css">
+	<link rel="stylesheet" href="../css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../css/print/pdf.css' : '../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Let's talk about Javascript...</h1>
+				<h2>Benjamin Lannon</h2>
+				<h2>February 14, 2018</h2>
+			</section>
+			<section>
+				<h2>First up: Safety First</h2>
+				<img src="img/safety.jpg">
+			</section>
+			<section>
+				<h2>This isn't a talk about Nintendo</h2>
+				<div style="display: flex; flex-direction: column;">
+					<img src="img/hunter.jpg" height="300px" width="200px" style="margin-left: 360px">
+					<span class=" fragment ">It's about Javascript</span>
+				</div>
+			</section>
+			<section>
+				<h2>Specifically: the Gamepad API</h2>
+				<p>What if I told you that you could use any gamepad ever to control webpages or web games in JS?</p>
+			</section>
+			<section>
+				<h2>Attaching Gamepads</h2>
+				<span class="fragment">
+					<pre><code class="javascript " data-trim contenteditable style="font-size: 18px; ">
+	window.addEventListener( 'gamepadconnected', function(e) {
+	  console.log( e.gamepad.id );
+	} );
+					</code></pre>
+				</span>
+				<span class="fragment">
+					<p>
+						Following you can get movement for joysticks axes and button presses.
+					</p>
+				</span>
+				<span class="fragment">
+					<p>
+						use requestAnimationFrame() to get updates from any gamepad
+					</p>
+				</span>
+			</section>
+			<section>
+				<h2>Use case: Web Presentations</h2>
+				<p>Github Link:
+					<a href="https://github.com/bibixx/reveal.js-gamepad-plugin">https://github.com/bibixx/reveal.js-gamepad-plugin</a>
+				</p>
+			</section>
+			<section>
+				<h2>Web Browser Support</h2>
+				<img src="img/caniuse.png">
+			</section>
+			<section>
+				<h1>Questions?</h1>
+			</section>
+		</div>
+	</div>
+
+	<script src="../lib/js/head.min.js "></script>
+	<script src="../js/reveal.js "></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: 'slide',
+
+			dependencies: [
+				{ src: '../plugin/markdown/marked.js' },
+				{ src: '../plugin/markdown/markdown.js' },
+				{ src: '../plugin/notes/notes.js', async: true },
+				{ src: '../plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: '../plugin/gamepad/gamepad.js', async: false }
+			]
+		});
+	</script>
+</body>
+
+</html>
