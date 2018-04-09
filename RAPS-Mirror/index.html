@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Clarkson Mirror RAPS Talk</title>
+
+	<link rel="stylesheet" href="../css/reveal.css">
+	<link rel="stylesheet" href="../css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../css/print/pdf.css' : '../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Clarkson University Mirror</h1>
+				<h2>Benjamin Lannon</h2>
+				<h2>April 14, 2018</h2>
+			</section>
+			<section>
+				<h2>What is a Mirror?</h2>
+				<p>
+					A Mirror stores copies of Open Source Software and allows users to download or update software close to their physical location.
+				</p>
+				<p>
+					Computer Science students at Clarkson have maintained 4 iterations of Mirror since 2001.
+				</p>
+			</section>
+			<section>
+				<h2>Projects Hosted</h2>
+				<p>35 Projects: 20 Linux Distros, 15 Software Products</p>
+				<p>Some notable ones include LibreOffice, VLC, Ubuntu, and many others</p>
+				<div style="display: flex; height: 250px; justify-content: space-between;">
+					<img src="img/libreoffice-logo.png" alt="LibreOffice Logo">
+					<img src="img/vlc.mini.svg" alt="VLC Logo">
+					<img src="img/ubuntu-logo-g.png" alt="Ubuntu Logo">
+				</div>
+			</section>
+			<section>
+				<h2>Mirror Metric Terminology</h2>
+				<ul>
+					<li>RX: Recieved data in bytes</li>
+					<li>TX: Transferred data in bytes</li>
+					<li>Rate: Transfer rate in Mbit/s</li>
+				</ul>
+			</section>
+			<section>
+				<h2>MirrorBandwidthStats</h2>
+				<p>A program to analyze hourly, daily, and monthly usage and store to backend database</p>
+				<p>
+					<a href="https://github.com/lannonbr/MirrorBandwidthStats">https://github.com/lannonbr/MirrorBandwidthStats</a>
+				</p>
+				<img width=800 src="img/mirror_stats.png" alt="Mirror General Stats Pie Charts">
+			</section>
+			<section>
+				<h2>Distrousage</h2>
+				<p>Daily Statistics on per-project bandwidth usage</p>
+				<img width=800 src="img/distrousage.png" alt="Distrousage chart">
+			</section>
+			<section>
+				<h2>GraphQL API</h2>
+				<p>API to grab structured data from the database</p>
+				<img src="img/graphql_query.png" alt="GraphQL Query">
+			</section>
+			<section>
+				<h2>Big Achievements</h2>
+				<ul>
+					<li>1.0PB bandwidth reached (1,000TB) on Jan 5, 2018</li>
+					<li>Blender & Libreoffice Reach frequently getting 0.5-1TB bandwidth daily</li>
+					<li>Mirror is a Global Service</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Global Usage on April 2nd</h2>
+				<img src="img/ips_Apr2.png" alt="">
+			</section>
+			<section>
+				<h1>Questions?</h1>
+				<p style="font-size: 80%">Mirror Stats:
+					<a href="https://mirror.clarkson.edu/stats.html">https://mirror.clarkson.edu/stats.html</a>
+				</p>
+				<p style="font-size: 80%">API:
+					<a href="http://mirrorstat.cslabs.clarkson.edu/graphql">http://mirrorstat.cslabs.clarkson.edu/graphql</a>
+				</p>
+				<p style="font-size: 80%">Slides:
+					<a href="https://lannonbrtalks.netlify.com/RAPS-Mirror/">https://lannonbrtalks.netlify.com/RAPS-Mirror/</a>
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="../lib/js/head.min.js "></script>
+	<script src="../js/reveal.js "></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: 'slide',
+
+			dependencies: [
+				{ src: '../plugin/markdown/marked.js' },
+				{ src: '../plugin/markdown/markdown.js' },
+				{ src: '../plugin/notes/notes.js', async: true },
+				{ src: '../plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: '../plugin/gamepad/gamepad.js', async: false }
+			]
+		});
+	</script>
+</body>
+
+</html>
