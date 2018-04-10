@@ -165,13 +165,45 @@ section.container {
   text-align: center;
 }
 
-/* .container {
+.talk {
+  display: flex;
+  align-items: center;
+}
+
+.talk:not(:last-child) {
+  border-bottom: 1px solid rgba(40, 40, 40, 0.4);
+}
+
+.talk .time {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-} */
+  width: 60px;
+  margin-right: 10px;
+  background-color: #9b59b6;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.talk .time .month {
+  font-size: 1.25em;
+}
+
+.talk .time .day {
+  font-size: 1.25em;
+}
+
+.talk .desc {
+  flex: 1;
+}
+
+.talk .desc h2 {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.talk .desc h2 a {
+  color: #2196f3;
+  text-decoration: none;
+}
